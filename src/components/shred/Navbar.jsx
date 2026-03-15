@@ -1,0 +1,80 @@
+import React, { useState } from "react";
+import { GiSprout } from "react-icons/gi";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { PiLockKeyOpenBold } from "react-icons/pi";
+import { HiMenu, HiX } from "react-icons/hi";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navLinks = ["Home", "About", "Solutions", "Blog", "Contact Us"];
+
+  return (
+    <div className="">
+      <nav className="container mx-auto bg-black backdrop-blur-md z-50 border-b border-slate-100 mt-8 py-2 fixed top-0 left-0 right-0 z-50 border-b border-gray-100 rounded-4xl">
+        <div className="flex mx-2 items-center justify-between">
+          {/* Logo and Brand */}
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-xl bg-[#4CAF50] flex items-center justify-center text-white">
+              <GiSprout className="w-6 h-6" />
+            </div>
+            <span className="font-bold text-2xl text-white tracking-tight">
+              Agri<span className="text-[#4CAF50]">Learn</span>
+            </span>
+          </div>
+
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link}
+                href="#"
+                className="text-white hover:text-gray-900 font-medium"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+
+          {/* CTA Button (Desktop) */}
+          <div className="hidden md:flex">
+            <button className="bg-[#3D7A41] text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
+              <PiLockKeyOpenBold />
+              Login
+            </button>
+          </div>
+
+          {/* Mobile Hamburger */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-green-800 text-3xl focus:outline-none"
+            >
+              {isOpen ? <HiX /> : <HiMenu />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden flex flex-col items-center bg-white border-t border-gray-100 py-4 gap-4 animate-slide-down">
+            {navLinks.map((link) => (
+              <a
+                key={link}
+                href="#"
+                className="text-green-800 hover:text-gray-900 font-medium text-lg"
+              >
+                {link}
+              </a>
+            ))}
+            <button className="bg-[#4CAF50] text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
+              <PiLockKeyOpenBold />
+              Login
+            </button>
+          </div>
+        )}
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
