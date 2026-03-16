@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <nav className="container mx-auto bg-black backdrop-blur-md z-50 border-b border-slate-100 mt-8 py-2 fixed top-0 left-0 right-0 z-50 border-b border-gray-100 rounded-4xl">
-        <div className="flex mx-2 items-center justify-between">
+      <nav className="fixed top-8 left-1/2 -translate-x-1/2 w-[95%] container bg-black backdrop-blur-md z-50 border-b border-gray-100 py-2 rounded-4xl">
+        <div className="  flex mx-2 items-center justify-between">
           {/* Logo and Brand */}
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl bg-[#4CAF50] flex items-center justify-center text-white">
