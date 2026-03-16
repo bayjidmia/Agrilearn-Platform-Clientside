@@ -23,12 +23,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link}
                 href="#"
-                className="text-white hover:text-gray-900 font-medium"
+                className="text-white hover:text-gray-200 font-medium text-lg transition-colors hover:border-white hover:border-b-2 pb-1"
               >
                 {link}
               </a>
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button (Desktop) */}
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <button className="bg-[#3D7A41] text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
               <PiLockKeyOpenBold />
               Login
@@ -44,10 +44,10 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Hamburger */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-green-800 text-3xl focus:outline-none"
+              className="text-white text-3xl focus:outline-none"
             >
               {isOpen ? <HiX /> : <HiMenu />}
             </button>
@@ -56,12 +56,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden flex flex-col items-center bg-white border-t border-gray-100 py-4 gap-4 animate-slide-down">
+          <div className="lg:hidden flex flex-col items-center bg-black border-t border-gray-100 py-4 gap-4 animate-slide-down">
             {navLinks.map((link) => (
               <a
                 key={link}
                 href="#"
-                className="text-green-800 hover:text-gray-900 font-medium text-lg"
+                className="text-white hover:text-gray-200 font-medium text-lg transition-colors hover:border-white hover:border-b-2 pb-1 "
               >
                 {link}
               </a>
