@@ -4,7 +4,7 @@ import Hero from "../Hero/Hero";
 
 const Home = () => {
   return (
-    <div className="bg-[#F3FBF4]">
+    <div className="bg-base-100">
       <Navbar></Navbar>
       <Hero></Hero>
     </div>

@@ -1,2 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #4caf50;
+  --color-secondary: #ffa726;
+  --color-accent: #ffc107;
+  --color-neutral: #f3fbf4;
+  --color-base-100: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* [#F3FBF4] */

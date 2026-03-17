@@ -18,7 +18,7 @@ const Navbar = () => {
               <GiSprout className="w-6 h-6" />
             </div>
             <span className="font-bold text-2xl text-white tracking-tight">
-              Agri<span className="text-[#4CAF50]">Learn</span>
+              Agri<span className="text-primary">Learn</span>
             </span>
           </div>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                 {link}
               </a>
             ))}
-            <button className="bg-[#4CAF50] text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
+            <button className="bg-primary text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
               <PiLockKeyOpenBold />
               Login
             </button>
