@@ -8,12 +8,12 @@ import { Link } from "react-router";
 const Hero = () => {
   return (
     <div>
-      <section className="relative   pt-28 pb-10 flex items-center justify-center">
-        <section className="relative container mx-auto pt-16 pb-30 overflow-hidden">
+      <section className="relative   pt-35  flex items-center justify-center">
+        <section className="relative container mx-auto  pt-16 pb-30 overflow-hidden">
           <div className=" px-4 sm:px-6 lg:px-8  relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Text Content */}
-              <div className="max-w-2xl order-2 lg:order-1">
+              <div className="w-full lg:h-full order-2 lg:order-1">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 text-primary font-medium text-sm mb-6">
                   <IoIosStarOutline className="w-4 h-4 fill-current" />
                   <span>#1 Agriculture Learning Platform</span>
