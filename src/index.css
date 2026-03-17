@@ -14,4 +14,17 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-border {
+  background-size: 200% 200%;
+  animation: borderMove 6s linear infinite;
+}
 /* [#F3FBF4] */
