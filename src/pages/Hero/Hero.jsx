@@ -19,7 +19,7 @@ const Hero = () => {
                   <span>#1 Agriculture Learning Platform</span>
                 </div>
 
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6 font-poppins">
+                <h1 className="text-5xl md:text-6xl font-bold text-green-900 leading-tight mb-6 font-poppins">
                   Learn Modern <br />
                   <span className="text-[#4CAF50]">Agriculture</span> Today
                 </h1>
@@ -31,14 +31,14 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link className="bg-primary hover:bg-[#43a047] text-white px-8 py-3.5 rounded-full font-semibold text-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-green-500/30">
+                  <Link className="bg-primary hover:bg-green-950 text-white px-8 py-3.5 rounded-full font-semibold text-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-green-500/30">
                     Explore Courses
                     <BsArrowRight className="w-5 h-5" />
                   </Link>
 
                   <Link
                     to="/instructor"
-                    className="bg-white text-gray-900 border-2 border-gray-200 hover:border-gray-300 px-8 py-3.5 rounded-full font-semibold text-lg flex items-center justify-center transition-all gap-2 "
+                    className="bg-white text-gray-900 border-2 border-gray-200 hover:border-green-500 px-8 py-3.5 rounded-full font-semibold text-lg flex items-center justify-center transition-all gap-2 "
                   >
                     Become Instructor
                     <BsArrowRight className="w-5 h-5" />
