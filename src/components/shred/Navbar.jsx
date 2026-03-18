@@ -3,6 +3,7 @@ import { GiSprout } from "react-icons/gi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { PiLockKeyOpenBold } from "react-icons/pi";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,10 +38,13 @@ const Navbar = () => {
 
           {/* CTA Button (Desktop) */}
           <div className="hidden lg:flex">
-            <button className="bg-[#3D7A41] text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
+            <Link
+              to="/login"
+              className="bg-[#3D7A41] text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors"
+            >
               <PiLockKeyOpenBold />
               Login
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
