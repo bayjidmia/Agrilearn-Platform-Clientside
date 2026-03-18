@@ -8,7 +8,27 @@ export function Login() {
   return (
     <div className="min-h-screen bg-[#F5F7FA] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-96 bg-[#4CAF50] transform -skew-y-6 -translate-y-32 z-0"></div>
+      <div className="absolute top-0 left-0 w-full h-96 bg-primary transform -skew-y-6 -translate-y-32 z-0"></div>
+      <Link
+        to="/"
+        className="absolute top-6 left-6 z-20 flex items-center gap-2 text-white hover:text-gray-200 transition"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        <span className="text-sm font-medium hidden sm:block">Back</span>
+      </Link>
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10">
         <Link to="/" className="flex items-center justify-center gap-2 mb-8">
@@ -119,7 +139,7 @@ export function Login() {
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-[#4CAF50] hover:bg-[#43a047] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4CAF50] transition-colors"
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-primary hover:bg-green-900focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4CAF50] transition-colors"
               >
                 Sign in
               </button>
