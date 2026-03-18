@@ -17,7 +17,6 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
         </div>
       </button>
-
       <div
         className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
       >
@@ -28,7 +27,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
 };
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(1); // Set second item open by default like the image
+  const [openIndex, setOpenIndex] = useState(1);
 
   const faqs = [
     {
