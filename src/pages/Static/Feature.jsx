@@ -103,7 +103,7 @@ const Feature = () => {
   ];
 
   return (
-    <div className=" bg-[#183a37]  conatiner border-2 mt-10 text-white py-20 px-4 md:px-0">
+    <div className=" bg-[#183a37]  conatiner border-2 mt-20 text-white py-20 px-4 md:px-0">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">

@@ -59,7 +59,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-16 font-sans">
+    <section className="container mt-10 mx-auto px-4 py-16 font-sans">
       <div className="text-center mb-12">
         <span className="bg-green-50 text-green-700 text-xs font-semibold px-3 py-1 rounded-full uppercase border border-green-100">
           FAQ
