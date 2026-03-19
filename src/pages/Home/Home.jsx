@@ -4,6 +4,7 @@ import Hero from "../Hero/Hero";
 import Trust from "../Static/Trust";
 import Feature from "../Static/Feature";
 import FAQ from "../FAQ/Faq";
+import HowItWorks from "../Static/HowItWorks";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <Navbar></Navbar>
       <Hero></Hero>
       <Trust></Trust>
-
+      <HowItWorks></HowItWorks>
       <Feature></Feature>
       <FAQ></FAQ>
     </div>
