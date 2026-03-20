@@ -5,6 +5,7 @@ import Trust from "../Static/Trust";
 import Feature from "../Static/Feature";
 import FAQ from "../FAQ/Faq";
 import HowItWorks from "../Static/HowItWorks";
+import Footer from "../../components/shred/Footer";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <HowItWorks></HowItWorks>
       <Feature></Feature>
       <FAQ></FAQ>
+      <Footer></Footer>
     </div>
   );
 };
