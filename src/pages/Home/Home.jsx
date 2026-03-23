@@ -6,6 +6,7 @@ import Feature from "../Static/Feature";
 import FAQ from "../FAQ/Faq";
 import HowItWorks from "../Static/HowItWorks";
 import Footer from "../../components/shred/Footer";
+import MeetOurTeachers from "../Static/MeetOurTeachers";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <HowItWorks></HowItWorks>
       <Feature></Feature>
       <FAQ></FAQ>
+      <MeetOurTeachers></MeetOurTeachers>
       <Footer></Footer>
     </div>
   );

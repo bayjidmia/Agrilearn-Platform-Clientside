@@ -36,8 +36,8 @@ const HowItWorks = () => {
   return (
     <section className="relative overflow-hidden bg-[#FCFBF7] py-20 px-6">
       <div className="text-center mb-22">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4">
-          How It <span className="text-primary">Works</span>
+        <h2 className="text-4xl md:text-5xl font-serif text-green-900 mt-4 mb-2">
+          How It <span className=" italic text-primary">Works</span>
         </h2>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed ">
           Start your journey toward sustainable and tech-driven agriculture in

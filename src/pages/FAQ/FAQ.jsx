@@ -64,7 +64,8 @@ const FAQ = () => {
           FAQ
         </span>
         <h2 className="text-4xl md:text-5xl font-serif text-green-900 mt-4 mb-2">
-          Common Farmer <span className="italic font-normal">Questions</span>
+          Common Farmer{" "}
+          <span className="italic font-normal text-primary ">Questions</span>
         </h2>
         <p className="text-gray-700 max-w-lg mx-auto">
           Got questions? We've got answers to help you get the most out of
