@@ -2,16 +2,16 @@ import React from "react";
 
 const instructors = [
   {
-    name: "Maria Gonzalez",
-    role: "Spanish Instructor",
+    name: "Tom Smith",
+    role: "Spanish Agronomist",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
+      "https://static.vecteezy.com/system/resources/thumbnails/047/265/476/small/a-young-farmer-inspects-the-quality-of-wheat-sprouts-in-the-field-the-concept-of-agriculture-photo.jpg",
   },
   {
     name: "Thomas Müller",
-    role: "German Instructor",
+    role: "German Soil Scientis",
     image:
-      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=400",
+      "https://img.freepik.com/free-photo/middle-view-man-cornfield_23-2148233437.jpg?semt=ais_rp_progressive&w=740&q=80",
   },
   {
     name: "Aiko Tanaka",
@@ -34,7 +34,7 @@ const InstructorCard = ({ instructor }) => (
         }}
       />
 
-      <div className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow-sm border border-gray-200">
+      <div className="absolute bottom-4 right-4 bg-primary rounded-full p-2 shadow-sm border border-gray-200">
         <svg
           width="16"
           height="16"
