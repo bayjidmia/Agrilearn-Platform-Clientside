@@ -7,6 +7,7 @@ import FAQ from "../FAQ/Faq";
 import HowItWorks from "../Static/HowItWorks";
 import Footer from "../../components/shred/Footer";
 import MeetOurTeachers from "../Static/MeetOurTeachers";
+import TestimonialGrid from "../Static/TestimonialGrid";
 
 const Home = () => {
   return (
@@ -17,7 +18,9 @@ const Home = () => {
       <HowItWorks></HowItWorks>
       <Feature></Feature>
       <MeetOurTeachers></MeetOurTeachers>
+      <TestimonialGrid></TestimonialGrid>
       <FAQ></FAQ>
+
       <Footer></Footer>
     </div>
   );
