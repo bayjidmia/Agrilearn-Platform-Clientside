@@ -7,7 +7,14 @@ import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = ["Home", "About", "Solutions", "Blog", "Contact Us"];
+  const navLinks = [
+    <Link to="/">Home</Link>,
+    <Link to="/about">About</Link>,
+    <Link to="/solutions">Solutions</Link>,
+    <Link to="/blog">Blog</Link>,
+    <Link to="/contact">Contact Us</Link>,
+    <Link to="/dashboard">Dashboard</Link>,
+  ];
 
   return (
     <div className="">

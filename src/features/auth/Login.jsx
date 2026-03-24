@@ -41,7 +41,7 @@ export function Login() {
         </Link>
       </div>
 
-      <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10">
+      <div className="sm:mx-auto sm:w-full sm:max-w-lg relative z-10">
         <div className="bg-white py-8 px-4 shadow-xl sm:rounded-2xl sm:px-10 border border-gray-100">
           <div className="mb-6 text-center">
             <h2 className="text-2xl font-bold text-gray-900 font-poppins">
@@ -53,6 +53,7 @@ export function Login() {
           </div>
 
           <form className="space-y-6" action="#" method="POST">
+            {/* email */}
             <div>
               <label
                 htmlFor="email"
@@ -75,7 +76,7 @@ export function Login() {
                 />
               </div>
             </div>
-
+            {/* password */}
             <div>
               <label
                 htmlFor="password"
@@ -109,6 +110,7 @@ export function Login() {
                 </button>
               </div>
             </div>
+            {/* remember */}
 
             <div className="flex items-center justify-between">
               <div className="flex items-center">
