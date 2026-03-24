@@ -1,5 +1,7 @@
-import { Link, Menu } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import { GiSprout } from "react-icons/gi";
+import { Link } from "react-router";
 import { Outlet } from "react-router";
 
 export default function DashboardLayout() {
@@ -9,16 +11,28 @@ export default function DashboardLayout() {
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <div
-        className={`bg-green-700 text-white transition-all duration-300 ${
-          isOpen ? "w-64" : "w-16"
+        className={`bg-green-900 text-white transition-all duration-300 ${
+          isOpen ? "w-80" : "w-13"
         }`}
       >
-        <div className="p-4 font-bold text-lg border-b border-green-600">
-          🌿 {isOpen && "KrishiLearn"}
-        </div>
+        <Link to="/">
+          <div className="flex gap-3 p-4 font-bold text-lg border-b border-green-600">
+            <div className="w-8 h-8 rounded-xl bg-[#4CAF50] flex items-center justify-center text-white">
+              <GiSprout className="w-6 h-6" />
+            </div>
+            {isOpen && (
+              <span className="font-bold text-2xl text-white tracking-tight">
+                Agri<span className="text-primary">Learn</span>
+              </span>
+            )}
+          </div>
+        </Link>
 
         <nav className="flex flex-col gap-2 p-3">
-          <Link to="/dashboard" className="hover:bg-green-600 p-2 rounded">
+          <Link
+            to="/dashboard"
+            className="hover:bg-green-600 text-white p-2 rounded"
+          >
             📊 {isOpen && "Dashboard"}
           </Link>
           <Link
@@ -31,7 +45,8 @@ export default function DashboardLayout() {
             to="/dashboard/users"
             className="hover:bg-green-600 p-2 rounded"
           >
-            👥 {isOpen && "Users"}
+            👥{" "}
+            {isOpen && <span className="font-medium text-white ">Users</span>}
           </Link>
           <Link
             to="/dashboard/settings"
@@ -47,7 +62,7 @@ export default function DashboardLayout() {
         {/* Navbar */}
         <div className="bg-white shadow px-4 py-3 flex items-center justify-between">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <Menu />
+            {isOpen ? <Minus /> : <Plus />}
           </button>
 
           <h1 className="font-semibold text-lg">Dashboard</h1>
