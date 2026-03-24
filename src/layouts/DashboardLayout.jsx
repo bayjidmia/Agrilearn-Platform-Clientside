@@ -12,11 +12,11 @@ export default function DashboardLayout() {
       {/* Sidebar */}
       <div
         className={`bg-green-900 text-white transition-all duration-300 ${
-          isOpen ? "w-80" : "w-13"
+          isOpen ? "w-80" : "w-14"
         }`}
       >
         <Link to="/">
-          <div className="flex gap-3 p-4 font-bold text-lg border-b border-green-600">
+          <div className="flex gap-3 bg-black p-4 font-bold text-lg border-b border-white">
             <div className="w-8 h-8 rounded-xl bg-[#4CAF50] flex items-center justify-center text-white">
               <GiSprout className="w-6 h-6" />
             </div>
@@ -62,7 +62,11 @@ export default function DashboardLayout() {
         {/* Navbar */}
         <div className="bg-white shadow px-4 py-3 flex items-center justify-between">
           <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <Minus /> : <Plus />}
+            {isOpen ? (
+              <Minus className="text-red-600" />
+            ) : (
+              <Plus className="text-primary" />
+            )}
           </button>
 
           <h1 className="font-semibold text-lg">Dashboard</h1>
