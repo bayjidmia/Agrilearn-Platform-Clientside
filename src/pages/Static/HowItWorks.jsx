@@ -34,7 +34,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#FCFBF7] py-20 px-6">
+    <section className="relative overflow-hidden py-20 px-6">
       <div className="text-center mb-22">
         <h2 className="text-4xl md:text-5xl font-serif text-green-900 mt-4 mb-2">
           How It <span className=" italic text-primary">Works</span>
