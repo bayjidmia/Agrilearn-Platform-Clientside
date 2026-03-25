@@ -104,7 +104,10 @@ const TestimonialCard = ({ client }) => {
 
 const TestimonialGrid = () => {
   return (
-    <div className=" container mx-auto overflow-hidden  ">
+    <div className=" mt-20 container mx-auto overflow-hidden  ">
+      <h1 className="text-4xl md:text-5xl font-serif text-green-900 mt-4 mb-15 text-center ">
+        What Our Users Say <span className="text-primary italic">About Us</span>
+      </h1>
       <div className="flex animate-slide gap-8 w-max pause-on-hover">
         {testimonials.map((item) => (
           <TestimonialCard key={item.id} client={item} />

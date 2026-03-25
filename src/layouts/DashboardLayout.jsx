@@ -11,7 +11,7 @@ export default function DashboardLayout() {
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <div
-        className={`bg-green-900 text-white transition-all duration-300 ${
+        className={`bg-green-900 flex flex-col text-white transition-all duration-300 ${
           isOpen ? "w-80" : "w-14"
         }`}
       >
@@ -28,7 +28,7 @@ export default function DashboardLayout() {
           </div>
         </Link>
 
-        <nav className="flex flex-col gap-2 p-3">
+        <nav className="flex flex-col gap-2 p-3 flex-1">
           <Link
             to="/dashboard"
             className="hover:bg-green-600 text-white p-2 rounded"
@@ -55,6 +55,11 @@ export default function DashboardLayout() {
             ⚙️ {isOpen && "Settings"}
           </Link>
         </nav>
+        <div className="p-3">
+          <button className="w-full flex items-center gap-2 hover:bg-red-600 p-2 rounded">
+            🚪 {isOpen && "Logout"}
+          </button>
+        </div>
       </div>
 
       {/* Main Section */}
