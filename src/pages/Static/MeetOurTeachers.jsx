@@ -19,6 +19,24 @@ const instructors = [
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
   },
+  {
+    name: "Aiko Tanaka",
+    role: "Japanese Instructor",
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Aiko Tanaka",
+    role: "Japanese Instructor",
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
+  },
+  {
+    name: "Aiko Tanaka",
+    role: "Japanese Instructor",
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
+  },
 ];
 
 const InstructorCard = ({ instructor }) => (
@@ -61,16 +79,16 @@ export default function MeetOurTeachers() {
     <section className="py-20 px-6 container mx-auto text-center">
       <div className="mb-16">
         <h2 className="text-4xl md:text-5xl font-serif text-green-900 mt-4 mb-2">
-          Meet Our <span className="text-primary italic  ">Instructors</span>
+          Meet Top <span className="text-primary italic  ">Instructors</span>
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-          Our teachers bring international experience and a passion for
-          Agriculture. With their guidance, students gain the skills and
-          confidence to succeed in real-world communication.
+          Teachers bring international experience and a passion for Agriculture.
+          With their guidance, students gain the skills and confidence to
+          succeed in real-world communication.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {instructors.map((teacher, index) => (
           <InstructorCard key={index} instructor={teacher} />
         ))}
