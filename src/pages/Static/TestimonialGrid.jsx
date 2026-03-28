@@ -4,6 +4,7 @@ import React from "react";
 const testimonials = [
   {
     id: 1,
+    type: "student",
     name: "Aisha Khan",
     role: "Product Manager",
     image: "https://i.pravatar.cc/150?u=aisha",
@@ -11,6 +12,7 @@ const testimonials = [
   },
   {
     id: 2,
+    type: "instructor",
     name: "Sam Chen",
     role: "Lead Designer",
     image: "https://i.pravatar.cc/150?u=sam",
@@ -18,6 +20,7 @@ const testimonials = [
   },
   {
     id: 3,
+    type: "student",
     name: "Maria Garcia",
     role: "Marketing Director",
     image: "https://i.pravatar.cc/150?u=maria",
@@ -25,6 +28,7 @@ const testimonials = [
   },
   {
     id: 4,
+    type: "instructor",
     name: "Dr. Aris Thorne",
     role: "Chief Engineer",
     image: "https://i.pravatar.cc/150?u=aris",
@@ -32,6 +36,7 @@ const testimonials = [
   },
   {
     id: 5,
+    type: "student",
     name: "Chloe Dupuis",
     role: "HR Specialist",
     image: "https://i.pravatar.cc/150?u=chloe",
@@ -39,6 +44,8 @@ const testimonials = [
   },
   {
     id: 6,
+    type: "instructor",
+
     name: "John Doe",
     role: "Software Architect",
     image: "https://i.pravatar.cc/150?u=john",
@@ -50,7 +57,9 @@ const TestimonialCard = ({ client }) => {
   return (
     <div className="relative w-full p-6 shadow-xl rounded-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl ">
       <div className="text-center mb-4">
-        <h3 className="italic font-serif text-3xl text-gray-800">Student</h3>
+        <h3 className="italic font-serif text-3xl text-gray-800">
+          {client.type === "student" ? "Student" : "Instructor"}
+        </h3>
         <h2 className="text-4xl font-black text-green-600 uppercase tracking-tighter -mt-2">
           Testimonial
         </h2>
