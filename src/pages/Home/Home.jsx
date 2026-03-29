@@ -20,7 +20,6 @@ const Home = () => {
       <MeetOurTeachers></MeetOurTeachers>
       <TestimonialGrid></TestimonialGrid>
       <FAQ></FAQ>
-
       <Footer></Footer>
     </div>
   );

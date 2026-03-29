@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/shred/Navbar";
+
 import { Outlet } from "react-router";
 
 const Root = () => {

@@ -25,18 +25,6 @@ const instructors = [
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
   },
-  {
-    name: "Aiko Tanaka",
-    role: "Japanese Instructor",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
-  },
-  {
-    name: "Aiko Tanaka",
-    role: "Japanese Instructor",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
-  },
 ];
 
 const InstructorCard = ({ instructor }) => (
