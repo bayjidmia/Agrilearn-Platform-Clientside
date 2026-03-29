@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ContactPage = () => {
-  const [inquiryType, setInquiryType] = useState("General");
-
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-6 md:p-12"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80')`,
+        backgroundImage: `url('https://plus.unsplash.com/premium_photo-1661907005604-cec7ffb6a042?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
       }}
     >
       {/* Dark Overlay for readability */}
@@ -75,8 +73,8 @@ const ContactPage = () => {
         </div>
 
         {/* Right Side: Form Card */}
-        <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl max-w-xl ml-auto w-full">
-          <h2 className="text-2xl font-semibold text-gray-800">
+        <div className=" rounded-3xl p-8 md:p-10 shadow-2xl max-w-xl ml-auto w-full">
+          <h2 className="text-2xl font-semibold text-green-900 mb-4">
             Tell Us What You Need
           </h2>
           <p className="text-gray-500 mt-2 mb-8">
@@ -88,12 +86,12 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="First Name"
-                className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+                className="w-full  text-white px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 "
               />
               <input
                 type="text"
                 placeholder="Last Name"
-                className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+                className="w-full text-white px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 "
               />
             </div>
 
@@ -101,41 +99,41 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="Country"
-                className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+                className="w-full text-white px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 "
               />
               <input
                 type="tel"
                 placeholder="Phone Number"
-                className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+                className="w-full text-white px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 "
               />
             </div>
 
             <input
               type="email"
               placeholder="Email Address"
-              className="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50"
+              className="w-full text-white px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 "
             />
 
             <textarea
               placeholder="Message"
               rows="4"
-              className="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-50 resize-none"
+              className="w-full text-white px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400  resize-none"
             ></textarea>
 
             <div className="flex items-center gap-3">
               <input
                 type="checkbox"
                 id="updates"
-                className="w-4 h-4 rounded border-gray-300 accent-black"
+                className="w-4 h-4  text-white rounded border-gray-300 accent-black"
               />
-              <label htmlFor="updates" className="text-sm text-gray-500">
+              <label htmlFor="updates" className="text-sm text-gray-200">
                 I'd like to receive exclusive offers and updates
               </label>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-white border border-gray-300 text-gray-800 font-semibold py-3 rounded-full mt-4 hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
+              className="w-full bg-primary text-white font-semibold py-3 rounded-full mt-4 hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
             >
               Submit
             </button>
