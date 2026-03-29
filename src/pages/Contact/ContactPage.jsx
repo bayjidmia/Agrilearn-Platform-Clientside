@@ -1,13 +1,34 @@
 import React from "react";
+import { Link } from "react-router";
 
 const ContactPage = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-6 md:p-12"
+      className=" min-h-screen relative  bg-cover bg-center bg-no-repeat flex  flex-col items-center justify-center p-6 md:p-12"
       style={{
         backgroundImage: `url('https://plus.unsplash.com/premium_photo-1661907005604-cec7ffb6a042?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
       }}
     >
+      <Link
+        to="/"
+        className="absolute top-6 left-6 z-20 flex items-center gap-2 text-white hover:text-primary  transition"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        <span className="  text-sm font-medium hidden sm:block">Back</span>
+      </Link>
       {/* Dark Overlay for readability */}
       <div className="absolute inset-0 bg-black/40"></div>
 
@@ -16,7 +37,8 @@ const ContactPage = () => {
         <div className="text-white space-y-12">
           <header>
             <h1 className="text-5xl md:text-6xl font-light leading-tight">
-              You Have Questions, <br /> We Have Answers
+              Contact Us{" "}
+              <span className="text-primary font-semibold italic">Anytime</span>
             </h1>
             <p className="mt-6 text-gray-200 max-w-md leading-relaxed">
               Discover experiences you won't find anywhere else — thoughtfully
@@ -73,11 +95,11 @@ const ContactPage = () => {
         </div>
 
         {/* Right Side: Form Card */}
-        <div className=" rounded-3xl p-8 md:p-10 shadow-2xl max-w-xl ml-auto w-full">
-          <h2 className="text-2xl font-semibold text-green-900 mb-4">
+        <div className=" rounded-3xl bg-white/20  backdrop-blur-sm   p-8 md:p-10 shadow-lg max-w-xl ml-auto w-full">
+          <h2 className="text-4xl font-semibold text-green-900 mb-4">
             Tell Us What You Need
           </h2>
-          <p className="text-gray-500 mt-2 mb-8">
+          <p className="text-black mt-2 mb-8">
             Our team is ready to assist you with every detail, big or small.
           </p>
 
