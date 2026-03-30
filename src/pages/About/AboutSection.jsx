@@ -17,8 +17,9 @@ const AboutSection = () => {
                 About Us
               </h2>
               <p className="text-xl md:text-2xl text-[#555] leading-relaxed max-w-2xl">
-                HubSpot's company and culture are a lot like our product.
-                They're crafted, not cobbled, for a delightful experience.
+                AgriLearn is a modern digital learning platform designed to
+                empower farmers and agriculture enthusiasts with practical
+                knowledge and skills.
               </p>
             </div>
             <div className="w-full h-auto rounded-3xl overflow-hidden shadow-lg border-2 border-dashed border-[#ddd] bg-white p-2">
@@ -34,12 +35,17 @@ const AboutSection = () => {
           <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-36">
             <div className="space-y-6 md:order-last">
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#111] leading-tight">
-                Our Mission: Helping Millions of Organizations Grow Better
+                Our Mission: To improve farmers’ productivity and income through
+                accessible digital education.
               </h2>
               <p className="text-lg md:text-xl text-[#555] leading-relaxed max-w-2xl">
-                We believe not just in growing bigger, but in growing better.
-                And growing better means aligning the success of your own
-                business with the success of your customers. Win-win!
+                Our goal is to make agriculture smarter, more productive, and
+                sustainable through the use of technology. On this platform,
+                users can learn about crop cultivation, soil management, modern
+                farming techniques, pest control, and agricultural business
+                strategies—all explained in a simple and easy-to-understand way.
+                AgriLearn aims to bridge the knowledge gap and help farmers
+                increase their productivity and income.
               </p>
             </div>
             <div className="w-full h-auto rounded-3xl overflow-hidden shadow-lg border-2 border-dashed border-[#ddd] bg-white p-2 md:order-first">
