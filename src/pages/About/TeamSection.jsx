@@ -5,9 +5,7 @@ const TeamSection = () => {
     {
       name: "Md.Bayjid Mia",
       role: "Founder & CEO(Tech Lead)",
-      bio:
-        "Full stack developer" +
-        " with 5+ years of experience in building scalable web applications.",
+      bio: "Full stack developer experience in building scalable web applications.",
       image: "https://i.ibb.co.com/qMLjgyfr/1000072045-removebg-preview-1.png",
     },
     {
