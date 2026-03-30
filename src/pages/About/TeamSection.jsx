@@ -10,15 +10,15 @@ const TeamSection = () => {
     },
     {
       name: "Ashwin Santiago",
-      role: "Engineering Manager",
-      bio: "Lead engineering teams at Netflix, Pitch, and Protocol Labs.",
+      role: "MEAN Stack Developer",
+      bio: "Experienced in building robust web applications using MongoDB, Express.js, Angular, and Node.js.",
       image:
         "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400",
     },
     {
       name: "Caitlyn King",
-      role: "Product Designer",
-      bio: "Founding design team at Figma. Former Pleo, Stripe, and Tile.",
+      role: "Backend Developer",
+      bio: "Experienced in building scalable backend systems and APIs.",
       image:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400",
     },
