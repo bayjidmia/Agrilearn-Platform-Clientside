@@ -251,18 +251,9 @@ server/
 * ✅ Cloudinary Integration
 * ✅ Modular Frontend Structure
 
----
 
-## 💼 Portfolio Value
 
-This project demonstrates:
 
-* ✔️ Strong System Design
-* ✔️ Database Normalization
-* ✔️ Full-stack MERN Development
-* ✔️ Real-world LMS Architecture
-
----
 
 ## 📌 Future Improvements
 
