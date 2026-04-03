@@ -1,4 +1,4 @@
-import { Minus, Plus } from "lucide-react";
+import { Menu, PanelLeftOpen, PanelRightOpen, X } from "lucide-react";
 import { useState } from "react";
 import { GiSprout } from "react-icons/gi";
 import { Link } from "react-router";
@@ -78,7 +78,7 @@ export default function DashboardLayout() {
               className="absolute top-3 right-3"
               onClick={() => setIsOpen(false)}
             >
-              ❌
+              <X className="text-red-700 font-bold" />
             </button>
 
             <Link to="/">
@@ -134,13 +134,13 @@ export default function DashboardLayout() {
         <div className="bg-white shadow px-4 py-3 flex items-center justify-between">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
-              <Minus className="text-red-600 hidden md:block" />
+              <PanelRightOpen className="text-primary hidden md:block" />
             ) : (
-              <Plus className="text-primary hidden md:block" />
+              <PanelLeftOpen className="text-primary hidden md:block" />
             )}
 
             {/* Mobile button always Plus */}
-            <Plus className="text-primary md:hidden" />
+            <Menu className="text-primary md:hidden" />
           </button>
 
           <h1 className="font-semibold text-lg">Dashboard</h1>
