@@ -1,4 +1,13 @@
-import { Menu, PanelLeftOpen, PanelRightOpen, X } from "lucide-react";
+import {
+  BookOpen,
+  CircleUserRound,
+  Cog,
+  Menu,
+  PanelLeftOpen,
+  PanelRightOpen,
+  Settings,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 import { GiSprout } from "react-icons/gi";
 import { Link } from "react-router";
@@ -16,7 +25,7 @@ export default function DashboardLayout() {
         }`}
       >
         <Link to="/">
-          <div className="flex gap-3 bg-black p-4 font-bold text-lg border-b border-white">
+          <div className="flex gap-3  p-4 font-bold text-lg border-b border-green-800">
             <div className="w-8 h-8 rounded-xl bg-[#4CAF50] flex items-center justify-center text-white">
               <GiSprout className="w-6 h-6" />
             </div>
@@ -29,30 +38,42 @@ export default function DashboardLayout() {
         </Link>
 
         <nav className="flex flex-col gap-2 p-3 flex-1">
-          <Link
+          {/* <Link
             to="/dashboard"
             className="hover:bg-green-600 text-white p-2 rounded"
           >
             📊 {isOpen && "Dashboard"}
-          </Link>
+          </Link> */}
           <Link
             to="/dashboard/courses"
             className="hover:bg-green-600 p-2 rounded"
           >
-            📚 {isOpen && "Courses"}
+            <div className="flex">
+              <BookOpen className="inline-block mr-2" />
+
+              {isOpen && (
+                <span className="font-medium text-white ">Courses</span>
+              )}
+            </div>
           </Link>
           <Link
             to="/dashboard/users"
             className="hover:bg-green-600 p-2 rounded"
           >
-            👥{" "}
-            {isOpen && <span className="font-medium text-white ">Users</span>}
+            <div className="flex">
+              <CircleUserRound className="inline-block mr-2" />
+
+              {isOpen && <span className="font-medium text-white ">Users</span>}
+            </div>
           </Link>
           <Link
             to="/dashboard/settings"
             className="hover:bg-green-600 p-2 rounded"
           >
-            ⚙️ {isOpen && "Settings"}
+            <div className="flex">
+              <Settings className="inline-block mr-2" />
+              {isOpen && "Settings"}
+            </div>
           </Link>
         </nav>
         <div className="p-3">
@@ -67,7 +88,7 @@ export default function DashboardLayout() {
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Overlay */}
           <div
-            className="absolute inset-0 bg-black/50"
+            className="absolute inset-0 "
             onClick={() => setIsOpen(false)}
           ></div>
 
@@ -82,7 +103,7 @@ export default function DashboardLayout() {
             </button>
 
             <Link to="/">
-              <div className="flex gap-3 bg-black p-4 font-bold text-lg border-b border-white">
+              <div className="flex gap-3  p-4 font-bold text-lg border-b border-green-800">
                 <div className="w-8 h-8 rounded-xl bg-[#4CAF50] flex items-center justify-center text-white">
                   <GiSprout className="w-6 h-6" />
                 </div>
@@ -93,29 +114,40 @@ export default function DashboardLayout() {
             </Link>
 
             <nav className="flex flex-col gap-2 p-3 flex-1">
-              <Link
+              {/* <Link
                 to="/dashboard"
                 className="hover:bg-green-600 text-white p-2 rounded"
               >
-                📊 Dashboard
-              </Link>
+                Dashboard
+              </Link> */}
               <Link
                 to="/dashboard/courses"
                 className="hover:bg-green-600 p-2 rounded"
               >
-                📚 Courses
+                <div className="flex">
+                  <BookOpen className="inline-block mr-2" />
+
+                  <span className="font-medium text-white ">Courses</span>
+                </div>
               </Link>
               <Link
                 to="/dashboard/users"
                 className="hover:bg-green-600 p-2 rounded"
               >
-                👥 Users
+                <div className="flex">
+                  <CircleUserRound className="inline-block mr-2" />
+
+                  <span className="font-medium text-white ">Users</span>
+                </div>
               </Link>
               <Link
                 to="/dashboard/settings"
                 className="hover:bg-green-600 p-2 rounded"
               >
-                ⚙️ Settings
+                <div className="flex">
+                  <Settings className="inline-block mr-2" />
+                  settings
+                </div>
               </Link>
             </nav>
 
