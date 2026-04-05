@@ -14,7 +14,7 @@ import { Link } from "react-router";
 import { Outlet } from "react-router";
 
 export default function DashboardLayout() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="flex h-screen bg-gray-100">

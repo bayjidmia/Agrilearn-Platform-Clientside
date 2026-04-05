@@ -177,11 +177,11 @@ const BlogSection = () => {
                   <p className="text-xs opacity-80">{post.date}</p>
                 </div>
                 <div className="flex justify-center items-center text-center gap-4 ">
-                  <div className="flex gap-2 items-center">
+                  <div className="flex gap-2 items-center text-white font-semibold">
                     <p>{post.view}</p>
                     <Eye></Eye>
                   </div>
-                  <div className="flex gap-2 items-center ">
+                  <div className="flex gap-2 items-center text-white font-semibold">
                     <p>{post.likes}</p>
                     <Heart></Heart>
                   </div>
