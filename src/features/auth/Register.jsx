@@ -1,10 +1,17 @@
 import { Link } from "react-router";
 import { Leaf, Mail, Lock, User, UserCheck, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [role, setRole] = useState("student");
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
   return (
     <div className="min-h-screen bg-[#F5F7FA] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -67,7 +74,7 @@ export function Register() {
             </button>
           </div>
 
-          <form className="space-y-5" action="#" method="POST">
+          <form onSubmit={handleSubmit(onsubmit)} className="space-y-5">
             <div>
               <label
                 htmlFor="name"
@@ -83,7 +90,7 @@ export function Register() {
                   id="name"
                   name="name"
                   type="text"
-                  required
+                  {...register("name", { required: true })}
                   className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#4CAF50] focus:border-[#4CAF50] sm:text-sm transition-colors"
                   placeholder="John Doe"
                 />
@@ -106,7 +113,7 @@ export function Register() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  required
+                  {...register("email", { required: true })}
                   className="appearance-none block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#4CAF50] focus:border-[#4CAF50] sm:text-sm transition-colors"
                   placeholder="farmer@example.com"
                 />
@@ -129,7 +136,7 @@ export function Register() {
                   name="password"
                   type={showPassword ? "text" : "password"}
                   autoComplete="new-password"
-                  required
+                  {...register("password", { required: true, minLength: 8 })}
                   className="appearance-none block w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#4CAF50] focus:border-[#4CAF50] sm:text-sm transition-colors"
                   placeholder="••••••••"
                 />
@@ -156,7 +163,7 @@ export function Register() {
                   id="terms"
                   name="terms"
                   type="checkbox"
-                  required
+                  {...register("terms", { required: true })}
                   className="h-4 w-4 text-[#4CAF50] focus:ring-[#4CAF50] border-gray-300 rounded"
                 />
               </div>
@@ -176,12 +183,12 @@ export function Register() {
             </div>
 
             <div>
-              <Link
-                to={role === "student" ? "/student" : "/instructor"}
+              <button
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-[#4CAF50] hover:bg-[#43a047] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4CAF50] transition-colors"
+                type="submit"
               >
                 Create Account
-              </Link>
+              </button>
             </div>
           </form>
 
