@@ -6,12 +6,12 @@ import { useForm } from "react-hook-form";
 export function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [role, setRole] = useState("student");
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
+
+  const onsubmit = (data) => {
+    console.log("Form Data:", { ...data, role });
+    // Here you would typically send the data to your backend API
+  };
 
   return (
     <div className="min-h-screen bg-[#F5F7FA] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
