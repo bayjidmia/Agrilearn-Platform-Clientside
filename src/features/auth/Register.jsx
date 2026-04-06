@@ -2,15 +2,30 @@ import { Link } from "react-router";
 import { Leaf, Mail, Lock, User, UserCheck, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { AuthContext } from "../../context/Authcontext";
 
 export function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [role, setRole] = useState("student");
   const { register, handleSubmit } = useForm();
 
+  const { GooglesignIn, setuser } = useContext(AuthContext);
+
   const onsubmit = (data) => {
     console.log("Form Data:", { ...data, role });
+
     // Here you would typically send the data to your backend API
+  };
+
+  const handlegoogle = async () => {
+    try {
+      const res = await GooglesignIn();
+      setuser(res.user);
+      console.log("Google Sign-In successful:", res.user);
+    } catch (error) {
+      console.error("Error signing in with Google:", error);
+    }
   };
 
   return (
@@ -205,7 +220,10 @@ export function Register() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3">
-              <button className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-300 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+              <button
+                onClick={handlegoogle}
+                className="w-full inline-flex justify-center py-2.5 px-4 border border-gray-300 rounded-xl shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+              >
                 <svg
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
