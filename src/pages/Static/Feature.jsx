@@ -108,9 +108,7 @@ const Feature = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif  mt-4 mb-2">
             <span className="text-white"> Why Choose</span>{" "}
-            <span className="italic font-normal text-primary">
-              KrishiLearn?
-            </span>
+            <span className="italic font-normal text-primary">AgriLearn?</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
             KrishiLearn empowers farmers and learners with modern agricultural

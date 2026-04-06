@@ -67,7 +67,7 @@ export default function MeetOurTeachers() {
     <section className="py-20 px-6 container mx-auto text-center">
       <div className="mb-16">
         <h2 className="text-4xl md:text-5xl font-serif text-green-900 mt-4 mb-2">
-          Meet Top <span className="text-primary italic  ">Instructors</span>
+          Meet Top <span className="text-primary italic  ">Trainers</span>
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
           Teachers bring international experience and a passion for Agriculture.

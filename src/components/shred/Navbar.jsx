@@ -34,13 +34,13 @@ const Navbar = () => {
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <p
                 key={link}
                 href="#"
                 className="text-white hover:text-gray-200 font-medium text-lg transition-colors hover:border-white hover:border-b-2 pb-1"
               >
                 {link}
-              </a>
+              </p>
             ))}
           </div>
 
@@ -70,18 +70,20 @@ const Navbar = () => {
         {isOpen && (
           <div className="lg:hidden flex flex-col items-center bg-black border-t border-gray-100 py-4 gap-4 animate-slide-down">
             {navLinks.map((link) => (
-              <a
+              <p
                 key={link}
                 href="#"
                 className="text-white hover:text-gray-200 font-medium text-lg transition-colors hover:border-white hover:border-b-2 pb-1 "
               >
                 {link}
-              </a>
+              </p>
             ))}
-            <button className="bg-primary text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
-              <PiLockKeyOpenBold />
-              Login
-            </button>
+            <Link to="/login">
+              <button className="bg-primary text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-lg font-medium hover:bg-[#346636] transition-colors">
+                <PiLockKeyOpenBold />
+                Login
+              </button>
+            </Link>
           </div>
         )}
       </nav>
