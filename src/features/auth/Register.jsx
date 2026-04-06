@@ -2,17 +2,14 @@ import { Link } from "react-router";
 import { Leaf, Mail, Lock, User, UserCheck, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
-import { AuthContext } from "../../context/Authcontext";
-import toast from "react-hot-toast";
+import { useAuth } from "./Hook";
 
 export function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [role, setRole] = useState("student");
 
   const { register, handleSubmit } = useForm();
-
-  const { GooglesignIn, setuser, setloading } = useContext(AuthContext);
+  const { googleLogin } = useAuth();
 
   const onsubmit = (data) => {
     console.log("Form Data:", { ...data, role });
@@ -21,34 +18,8 @@ export function Register() {
   };
   //  Goggle Registeration handler
   const handlegoogle = async () => {
-    try {
-      setloading(true);
-      const res = await GooglesignIn();
-      setuser(res.user);
-      console.log("Google Sign-In successful:", res.user);
-    } catch (error) {
-      console.error("Error signing in with Google:", error);
-      let message = "Something went wrong.";
-
-      if (error.code === "auth/popup-closed-by-user") {
-        message = "Login popup closed";
-      } else if (error.code === "auth/cancelled-popup-request") {
-        message = "A login popup is already open.";
-      } else if (error.code === "auth/network-request-failed") {
-        message = "“A network error occurred. Please try again.”";
-      }
-
-      toast.error(message, {
-        duration: 5000,
-        position: "top-center",
-        style: {
-          background: "#f87171",
-          color: "#fff",
-        },
-      });
-    } finally {
-      setloading(false);
-    }
+    const res = await googleLogin();
+    console.log("Google Sign-In successful:", res.user);
   };
 
   return (
