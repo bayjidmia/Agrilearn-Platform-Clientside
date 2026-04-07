@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 export const useAuth = () => {
   const { GooglesignIn, setloading, setuser } = useContext(AuthContext);
 
+  //  Google Sign-In handler
   const googleLogin = async () => {
     try {
       setloading(true);
