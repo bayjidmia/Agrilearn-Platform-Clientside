@@ -8,13 +8,16 @@ import {
   Settings,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GiSprout } from "react-icons/gi";
 import { Link } from "react-router";
 import { Outlet } from "react-router";
+import { AuthContext } from "../context/Authcontext";
+import image from "../assets/image.png";
 
 export default function DashboardLayout() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const { user } = useContext(AuthContext);
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -179,9 +182,9 @@ export default function DashboardLayout() {
 
           <div className="flex items-center gap-3">
             <img
-              src="https://i.pravatar.cc/40"
+              className="w-12 h-12 rounded-full"
+              src={user?.photoURL || image}
               alt="user"
-              className="rounded-full"
             />
           </div>
         </div>
