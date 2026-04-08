@@ -9,10 +9,13 @@ export function Register() {
   const [role, setRole] = useState("student");
 
   const { register, handleSubmit } = useForm();
-  const { googleLogin } = useAuth();
+  const { googleLogin, Register } = useAuth();
 
   const onsubmit = (data) => {
     console.log("Form Data:", { ...data, role });
+    const { email, password } = data;
+    const res = Register(email, password);
+    console.log("Registration successful:", res.user);
 
     // Here you would typically send the data to your backend API
   };

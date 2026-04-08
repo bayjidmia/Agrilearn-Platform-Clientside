@@ -3,7 +3,18 @@ import { AuthContext } from "../../context/Authcontext";
 import toast from "react-hot-toast";
 
 export const useAuth = () => {
-  const { GooglesignIn, setloading, setuser } = useContext(AuthContext);
+  const { createUser, GooglesignIn, setloading, setuser } =
+    useContext(AuthContext);
+
+  const Register = async (email, password) => {
+    try {
+      setloading(true);
+      const res = await createUser(email, password);
+      setuser(res.user);
+    } catch (error) {
+      console.error("Error registering user:", error);
+    }
+  };
 
   //  Google Sign-In handler
   const googleLogin = async () => {
@@ -37,5 +48,5 @@ export const useAuth = () => {
     }
   };
 
-  return { googleLogin };
+  return { googleLogin, Register };
 };

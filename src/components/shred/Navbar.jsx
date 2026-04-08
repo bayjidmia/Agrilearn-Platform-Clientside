@@ -10,7 +10,15 @@ import image from "../../assets/image.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
+
+  const handlelogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
 
   const navLinks = [
     <Link to="/">Home</Link>,
@@ -86,9 +94,7 @@ const Navbar = () => {
                   <li>
                     <a>Settings</a>
                   </li>
-                  <li>
-                    <a>Logout</a>
-                  </li>
+                  <button onClick={handlelogout}>Logout</button>
                 </ul>
               </div>
             ) : (
