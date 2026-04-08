@@ -11,6 +11,7 @@ export const useAuth = () => {
       setloading(true);
       const res = await createUser(email, password);
       setuser(res.user);
+      return res;
     } catch (error) {
       console.error("Error registering user:", error);
     }

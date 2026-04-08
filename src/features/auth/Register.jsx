@@ -11,10 +11,9 @@ export function Register() {
   const { register, handleSubmit } = useForm();
   const { googleLogin, Register } = useAuth();
 
-  const onsubmit = (data) => {
-    console.log("Form Data:", { ...data, role });
+  const onsubmit = async (data) => {
     const { email, password } = data;
-    const res = Register(email, password);
+    const res = await Register(email, password);
     console.log("Registration successful:", res.user);
 
     // Here you would typically send the data to your backend API
