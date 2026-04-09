@@ -1,11 +1,22 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context/Authcontext";
 import toast from "react-hot-toast";
+import { registerUser } from "./Api";
 
 export const useAuth = () => {
   const { createUser, GooglesignIn, setloading, setuser } =
     useContext(AuthContext);
 
+  const saveregisteredUser = async (formdata) => {
+    try {
+      const data = await registerUser(formdata);
+      return data;
+    } catch (error) {
+      console.error("Error saving registered user:", error);
+      throw error;
+    }
+  };
+  // Email and Password Registration handler
   const Register = async (email, password) => {
     try {
       setloading(true);
@@ -49,5 +60,5 @@ export const useAuth = () => {
     }
   };
 
-  return { googleLogin, Register };
+  return { googleLogin, Register, saveregisteredUser };
 };
